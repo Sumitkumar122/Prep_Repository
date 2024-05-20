@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<sample t="46897" it="84" lt="0" ct="1400" ts="1690524232119" s="true" lb="WLN_T01_FIFA_GWP_SAP_AppleTV" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="LF_POST_WLN_Redemption_Kong 1-2" dt="" de="" by="525" sby="1153" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+  <httpSample t="46897" it="0" lt="46897" ct="1400" ts="1690524232202" s="true" lb="WLN_T01_FIFA_GWP_SAP_AppleTV" rc="200" rm="OK" tn="LF_POST_WLN_Redemption_Kong 1-2" dt="text" de="" by="525" sby="1153" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 6
+Connection: keep-alive
+traceresponse: 00-a6ac430caf390521cb1ae9058d0c30d2-e7dd0d3f06fe5c86-01
+x-dt-tracestate: b55664ae-77ca6b1c@dt
+cache-control: no-cache; no-store, must-revalidate, private
+pragma: no-cache
+expires: 0
+date: Fri, 28 Jul 2023 06:04:38 GMT
+kong-request-id: f0016c63-fcc2-4dab-a00d-d2a1b11bfd79#1269067
+x-kong-upstream-latency: 45204
+x-kong-proxy-latency: 4
+via: kong/2.8.2.3-enterprise-edition
+vary: Origin
+vary: Origin
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Authorization: Basic Q0FNUE1HTVQ6c29hb3JnaWQ=
+Content-Type: application/json
+x-dynatrace-test: LSN=WLNLoyaltyAPI;TSN=WLN_T01_FIFA_GWP_SAP_AppleTV;SI=BZM;LTN=WLNLoyaltyAPI;VU=2;
+Content-Length: 757
+Host: apigw-st.tsl.telus.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_372)
+</requestHeader>
+    <responseData class="java.lang.String">340302</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&#xd;
+    &quot;customerInfo&quot;: {&#xd;
+        &quot;customerId&quot;: 548459,&#xd;
+        &quot;firstName&quot;: &quot;DENISE&quot;,&#xd;
+        &quot;lastName&quot;: &quot;BOLIN-ZZ&quot;&#xd;
+    },&#xd;
+    &quot;billingAccountNumber&quot;: 605015278,&#xd;
+    &quot;providerTxnId&quot;: &quot;140019899&quot;,&#xd;
+    &quot;redemptionType&quot;: &quot;GWP-10&quot;,&#xd;
+    &quot;quantity&quot;: 25,&#xd;
+    &quot;dateTime&quot;: &quot;2023-07-18 00:00:00.000&quot;,&#xd;
+    &quot;barCode&quot;: &quot;9164618333132317527&quot;,&#xd;
+    &quot;description&quot;: &quot;Apple TV 4K 32 GB&quot;,&#xd;
+    &quot;shippingAddress&quot;: {&#xd;
+        &quot;streetNr&quot;: &quot;85&quot;,&#xd;
+        &quot;streetName&quot;: &quot;JOHN ST&quot;,&#xd;
+        &quot;city&quot;: &quot;MERRITT&quot;,&#xd;
+        &quot;country&quot;: &quot;CAN&quot;,&#xd;
+        &quot;postcode&quot;: &quot;V0K2B0&quot;,&#xd;
+        &quot;stateOrProvince&quot;: &quot;BC&quot;&#xd;
+    },&#xd;
+    &quot;originatorId&quot;: &quot;123456&quot;,&#xd;
+    &quot;status&quot;: &quot;create&quot;,&#xd;
+    &quot;shippingContact&quot;: {&#xd;
+        &quot;phoneNumber&quot;: &quot;6047105322&quot;,&#xd;
+        &quot;email&quot;: &quot;sap@test.com&quot;&#xd;
+    }&#xd;
+}</queryString>
+    <java.net.URL>https://apigw-st.tsl.telus.com/rest/it04/customer/LoyaltyFulfillmentAPI_v1_0_RP/redemption/fulfill</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="47731" it="84" lt="0" ct="1400" ts="1690524232119" s="true" lb="WLN_T01_FIFA_GWP_SAP_AppleTV" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="LF_POST_WLN_Redemption_Kong 1-1" dt="" de="" by="525" sby="1153" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+  <httpSample t="47731" it="0" lt="47731" ct="1400" ts="1690524232202" s="true" lb="WLN_T01_FIFA_GWP_SAP_AppleTV" rc="200" rm="OK" tn="LF_POST_WLN_Redemption_Kong 1-1" dt="text" de="" by="525" sby="1153" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 6
+Connection: keep-alive
+traceresponse: 00-94a88203a7a5f18dcc45053c69a89d0e-e95db7db70e7691d-01
+x-dt-tracestate: b55664ae-77ca6b1c@dt
+cache-control: no-cache; no-store, must-revalidate, private
+pragma: no-cache
+expires: 0
+date: Fri, 28 Jul 2023 06:04:39 GMT
+kong-request-id: ac64a493-55ba-4deb-884b-6136c9c9f71e#1275552
+x-kong-upstream-latency: 46063
+x-kong-proxy-latency: 5
+via: kong/2.8.2.3-enterprise-edition
+vary: Origin
+vary: Origin
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Authorization: Basic Q0FNUE1HTVQ6c29hb3JnaWQ=
+Content-Type: application/json
+x-dynatrace-test: LSN=WLNLoyaltyAPI;TSN=WLN_T01_FIFA_GWP_SAP_AppleTV;SI=BZM;LTN=WLNLoyaltyAPI;VU=1;
+Content-Length: 757
+Host: apigw-st.tsl.telus.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_372)
+</requestHeader>
+    <responseData class="java.lang.String">340303</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&#xd;
+    &quot;customerInfo&quot;: {&#xd;
+        &quot;customerId&quot;: 762974,&#xd;
+        &quot;firstName&quot;: &quot;SADIE&quot;,&#xd;
+        &quot;lastName&quot;: &quot;BATTEN-ZZ&quot;&#xd;
+    },&#xd;
+    &quot;billingAccountNumber&quot;: 200826107,&#xd;
+    &quot;providerTxnId&quot;: &quot;140019898&quot;,&#xd;
+    &quot;redemptionType&quot;: &quot;GWP-10&quot;,&#xd;
+    &quot;quantity&quot;: 25,&#xd;
+    &quot;dateTime&quot;: &quot;2023-07-17 00:00:00.000&quot;,&#xd;
+    &quot;barCode&quot;: &quot;9164618333132317527&quot;,&#xd;
+    &quot;description&quot;: &quot;Apple TV 4K 32 GB&quot;,&#xd;
+    &quot;shippingAddress&quot;: {&#xd;
+        &quot;streetNr&quot;: &quot;85&quot;,&#xd;
+        &quot;streetName&quot;: &quot;JOHN ST&quot;,&#xd;
+        &quot;city&quot;: &quot;MERRITT&quot;,&#xd;
+        &quot;country&quot;: &quot;CAN&quot;,&#xd;
+        &quot;postcode&quot;: &quot;V0K2B0&quot;,&#xd;
+        &quot;stateOrProvince&quot;: &quot;BC&quot;&#xd;
+    },&#xd;
+    &quot;originatorId&quot;: &quot;123456&quot;,&#xd;
+    &quot;status&quot;: &quot;create&quot;,&#xd;
+    &quot;shippingContact&quot;: {&#xd;
+        &quot;phoneNumber&quot;: &quot;6047105322&quot;,&#xd;
+        &quot;email&quot;: &quot;sap@test.com&quot;&#xd;
+    }&#xd;
+}</queryString>
+    <java.net.URL>https://apigw-st.tsl.telus.com/rest/it04/customer/LoyaltyFulfillmentAPI_v1_0_RP/redemption/fulfill</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="46694" it="1" lt="0" ct="0" ts="1690524279937" s="true" lb="WLN_T01_FIFA_GWP_SAP_ExpansionPack" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="LF_POST_WLN_Redemption_Kong 1-1" dt="" de="" by="524" sby="1171" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+  <httpSample t="46694" it="0" lt="46693" ct="0" ts="1690524279938" s="true" lb="WLN_T01_FIFA_GWP_SAP_ExpansionPack" rc="200" rm="OK" tn="LF_POST_WLN_Redemption_Kong 1-1" dt="text" de="" by="524" sby="1171" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 6
+Connection: keep-alive
+traceresponse: 00-1dc24a0a7550964dce46a0a0def2dd12-48fac12079747fb0-01
+x-dt-tracestate: b55664ae-77ca6b1c@dt
+cache-control: no-cache; no-store, must-revalidate, private
+pragma: no-cache
+expires: 0
+date: Fri, 28 Jul 2023 06:05:26 GMT
+kong-request-id: ea751a11-df9f-481e-a3e5-e738dfd5a608#984335
+x-kong-upstream-latency: 46445
+x-kong-proxy-latency: 1
+via: kong/2.8.2.3-enterprise-edition
+vary: Origin
+vary: Origin
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Authorization: Basic Q0FNUE1HTVQ6c29hb3JnaWQ=
+Content-Type: application/json
+x-dynatrace-test: LSN=WLNLoyaltyAPI;TSN=WLN_T01_FIFA_GWP_SAP_ExpansionPack;SI=BZM;LTN=WLNLoyaltyAPI;VU=1;
+Content-Length: 769
+Host: apigw-st.tsl.telus.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_372)
+</requestHeader>
+    <responseData class="java.lang.String">340304</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&#xd;
+    &quot;customerInfo&quot;: {&#xd;
+        &quot;customerId&quot;: 1580078,&#xd;
+        &quot;firstName&quot;: &quot;JONI&quot;,&#xd;
+        &quot;lastName&quot;: &quot;WEIR-ZZ&quot;&#xd;
+    },&#xd;
+    &quot;billingAccountNumber&quot;: 212423370,&#xd;
+    &quot;providerTxnId&quot;: &quot;140021449&quot;,&#xd;
+    &quot;redemptionType&quot;: &quot;GWP-8&quot;,&#xd;
+    &quot;quantity&quot;: 25,&#xd;
+    &quot;dateTime&quot;: &quot;2023-07-17 00:00:00.000&quot;,&#xd;
+    &quot;barCode&quot;: &quot;9164617963924317516&quot;,&#xd;
+    &quot;description&quot;: &quot;TELUS Boost Wi-Fi Expansion Pack&quot;,&#xd;
+    &quot;shippingAddress&quot;: {&#xd;
+        &quot;streetNr&quot;: &quot;85&quot;,&#xd;
+        &quot;streetName&quot;: &quot;JOHN ST&quot;,&#xd;
+        &quot;city&quot;: &quot;MERRITT&quot;,&#xd;
+        &quot;country&quot;: &quot;CAN&quot;,&#xd;
+        &quot;postcode&quot;: &quot;V0K2B0&quot;,&#xd;
+        &quot;stateOrProvince&quot;: &quot;BC&quot;&#xd;
+    },&#xd;
+    &quot;originatorId&quot;: &quot;123456&quot;,&#xd;
+    &quot;status&quot;: &quot;create&quot;,&#xd;
+    &quot;shippingContact&quot;: {&#xd;
+        &quot;phoneNumber&quot;: &quot;6047105322&quot;,&#xd;
+        &quot;email&quot;: &quot;sap@test.com&quot;&#xd;
+    }&#xd;
+}</queryString>
+    <java.net.URL>https://apigw-st.tsl.telus.com/rest/it04/customer/LoyaltyFulfillmentAPI_v1_0_RP/redemption/fulfill</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="57696" it="8" lt="0" ct="1102" ts="1690524352143" s="true" lb="WLN_T01_FIFA_GWP_SAP_AppleTV" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="LF_POST_WLN_Redemption_Kong 1-2" dt="" de="" by="526" sby="1158" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+  <httpSample t="57696" it="0" lt="57696" ct="1102" ts="1690524352150" s="true" lb="WLN_T01_FIFA_GWP_SAP_AppleTV" rc="200" rm="OK" tn="LF_POST_WLN_Redemption_Kong 1-2" dt="text" de="" by="526" sby="1158" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 6
+Connection: keep-alive
+traceresponse: 00-58e07cde5be8dcb9f13cf66a6757055e-a0411d28fd9967a8-01
+x-dt-tracestate: b55664ae-77ca6b1c@dt
+cache-control: no-cache; no-store, must-revalidate, private
+pragma: no-cache
+expires: 0
+date: Fri, 28 Jul 2023 06:06:49 GMT
+kong-request-id: 802f0466-94f5-4e67-a524-a81eb3463d7b#1273645
+x-kong-upstream-latency: 56332
+x-kong-proxy-latency: 16
+via: kong/2.8.2.3-enterprise-edition
+vary: Origin
+vary: Origin
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Authorization: Basic Q0FNUE1HTVQ6c29hb3JnaWQ=
+Content-Type: application/json
+x-dynatrace-test: LSN=WLNLoyaltyAPI;TSN=WLN_T01_FIFA_GWP_SAP_AppleTV;SI=BZM;LTN=WLNLoyaltyAPI;VU=2;
+Content-Length: 762
+Host: apigw-st.tsl.telus.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_372)
+</requestHeader>
+    <responseData class="java.lang.String">340305</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&#xd;
+    &quot;customerInfo&quot;: {&#xd;
+        &quot;customerId&quot;: 18755652,&#xd;
+        &quot;firstName&quot;: &quot;RANDALL&quot;,&#xd;
+        &quot;lastName&quot;: &quot;BRENNER-ZZ&quot;&#xd;
+    },&#xd;
+    &quot;billingAccountNumber&quot;: 123790730,&#xd;
+    &quot;providerTxnId&quot;: &quot;140019901&quot;,&#xd;
+    &quot;redemptionType&quot;: &quot;GWP-10&quot;,&#xd;
+    &quot;quantity&quot;: 25,&#xd;
+    &quot;dateTime&quot;: &quot;2023-07-17 00:00:00.000&quot;,&#xd;
+    &quot;barCode&quot;: &quot;9164618333132317527&quot;,&#xd;
+    &quot;description&quot;: &quot;Apple TV 4K 32 GB&quot;,&#xd;
+    &quot;shippingAddress&quot;: {&#xd;
+        &quot;streetNr&quot;: &quot;85&quot;,&#xd;
+        &quot;streetName&quot;: &quot;JOHN ST&quot;,&#xd;
+        &quot;city&quot;: &quot;MERRITT&quot;,&#xd;
+        &quot;country&quot;: &quot;CAN&quot;,&#xd;
+        &quot;postcode&quot;: &quot;V0K2B0&quot;,&#xd;
+        &quot;stateOrProvince&quot;: &quot;BC&quot;&#xd;
+    },&#xd;
+    &quot;originatorId&quot;: &quot;123456&quot;,&#xd;
+    &quot;status&quot;: &quot;create&quot;,&#xd;
+    &quot;shippingContact&quot;: {&#xd;
+        &quot;phoneNumber&quot;: &quot;6047105322&quot;,&#xd;
+        &quot;email&quot;: &quot;sap@test.com&quot;&#xd;
+    }&#xd;
+}</queryString>
+    <java.net.URL>https://apigw-st.tsl.telus.com/rest/it04/customer/LoyaltyFulfillmentAPI_v1_0_RP/redemption/fulfill</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="59226" it="2" lt="0" ct="1028" ts="1690524352223" s="true" lb="WLN_T01_FIFA_GWP_SAP_AppleTV" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="LF_POST_WLN_Redemption_Kong 1-1" dt="" de="" by="525" sby="1155" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+  <httpSample t="59226" it="0" lt="59226" ct="1028" ts="1690524352225" s="true" lb="WLN_T01_FIFA_GWP_SAP_AppleTV" rc="200" rm="OK" tn="LF_POST_WLN_Redemption_Kong 1-1" dt="text" de="" by="525" sby="1155" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 6
+Connection: keep-alive
+traceresponse: 00-10260e49c65135e2ad4c0579079d51fc-9a8ac67629d15516-01
+x-dt-tracestate: b55664ae-77ca6b1c@dt
+cache-control: no-cache; no-store, must-revalidate, private
+pragma: no-cache
+expires: 0
+date: Fri, 28 Jul 2023 06:06:51 GMT
+kong-request-id: 5af09948-051f-455b-a8a2-3197e1b4f25c#1288090
+x-kong-upstream-latency: 57950
+x-kong-proxy-latency: 2
+via: kong/2.8.2.3-enterprise-edition
+vary: Origin
+vary: Origin
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Authorization: Basic Q0FNUE1HTVQ6c29hb3JnaWQ=
+Content-Type: application/json
+x-dynatrace-test: LSN=WLNLoyaltyAPI;TSN=WLN_T01_FIFA_GWP_SAP_AppleTV;SI=BZM;LTN=WLNLoyaltyAPI;VU=1;
+Content-Length: 759
+Host: apigw-st.tsl.telus.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_372)
+</requestHeader>
+    <responseData class="java.lang.String">340306</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&#xd;
+    &quot;customerInfo&quot;: {&#xd;
+        &quot;customerId&quot;: 2019068,&#xd;
+        &quot;firstName&quot;: &quot;KATHIE&quot;,&#xd;
+        &quot;lastName&quot;: &quot;CHEUNG-ZZ&quot;&#xd;
+    },&#xd;
+    &quot;billingAccountNumber&quot;: 200968881,&#xd;
+    &quot;providerTxnId&quot;: &quot;140019900&quot;,&#xd;
+    &quot;redemptionType&quot;: &quot;GWP-10&quot;,&#xd;
+    &quot;quantity&quot;: 25,&#xd;
+    &quot;dateTime&quot;: &quot;2023-07-19 00:00:00.000&quot;,&#xd;
+    &quot;barCode&quot;: &quot;9164618333132317527&quot;,&#xd;
+    &quot;description&quot;: &quot;Apple TV 4K 32 GB&quot;,&#xd;
+    &quot;shippingAddress&quot;: {&#xd;
+        &quot;streetNr&quot;: &quot;85&quot;,&#xd;
+        &quot;streetName&quot;: &quot;JOHN ST&quot;,&#xd;
+        &quot;city&quot;: &quot;MERRITT&quot;,&#xd;
+        &quot;country&quot;: &quot;CAN&quot;,&#xd;
+        &quot;postcode&quot;: &quot;V0K2B0&quot;,&#xd;
+        &quot;stateOrProvince&quot;: &quot;BC&quot;&#xd;
+    },&#xd;
+    &quot;originatorId&quot;: &quot;123456&quot;,&#xd;
+    &quot;status&quot;: &quot;create&quot;,&#xd;
+    &quot;shippingContact&quot;: {&#xd;
+        &quot;phoneNumber&quot;: &quot;6047105322&quot;,&#xd;
+        &quot;email&quot;: &quot;sap@test.com&quot;&#xd;
+    }&#xd;
+}</queryString>
+    <java.net.URL>https://apigw-st.tsl.telus.com/rest/it04/customer/LoyaltyFulfillmentAPI_v1_0_RP/redemption/fulfill</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="22740" it="0" lt="0" ct="0" ts="1690524409848" s="true" lb="WLN_T01_FIFA_GWP_SAP_ExpansionPack" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="LF_POST_WLN_Redemption_Kong 1-2" dt="" de="" by="525" sby="1174" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+  <httpSample t="22740" it="0" lt="22739" ct="0" ts="1690524409848" s="true" lb="WLN_T01_FIFA_GWP_SAP_ExpansionPack" rc="200" rm="OK" tn="LF_POST_WLN_Redemption_Kong 1-2" dt="text" de="" by="525" sby="1174" sc="1" ec="0" ng="2" na="2" hn="BA-000453998">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 6
+Connection: keep-alive
+traceresponse: 00-dd47c4340802569c71595fcb99aefb13-1338124ce363db71-01
+x-dt-tracestate: b55664ae-77ca6b1c@dt
+cache-control: no-cache; no-store, must-revalidate, private
+pragma: no-cache
+expires: 0
+date: Fri, 28 Jul 2023 06:07:12 GMT
+kong-request-id: 5af09948-051f-455b-a8a2-3197e1b4f25c#1288131
+x-kong-upstream-latency: 22494
+x-kong-proxy-latency: 1
+via: kong/2.8.2.3-enterprise-edition
+vary: Origin
+vary: Origin
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Authorization: Basic Q0FNUE1HTVQ6c29hb3JnaWQ=
+Content-Type: application/json
+x-dynatrace-test: LSN=WLNLoyaltyAPI;TSN=WLN_T01_FIFA_GWP_SAP_ExpansionPack;SI=BZM;LTN=WLNLoyaltyAPI;VU=2;
+Content-Length: 772
+Host: apigw-st.tsl.telus.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_372)
+</requestHeader>
+    <responseData class="java.lang.String">340307</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&#xd;
+    &quot;customerInfo&quot;: {&#xd;
+        &quot;customerId&quot;: 20520457,&#xd;
+        &quot;firstName&quot;: &quot;ELLIS&quot;,&#xd;
+        &quot;lastName&quot;: &quot;NUNEZ-ZZ&quot;&#xd;
+    },&#xd;
+    &quot;billingAccountNumber&quot;: 124888283,&#xd;
+    &quot;providerTxnId&quot;: &quot;140021452&quot;,&#xd;
+    &quot;redemptionType&quot;: &quot;GWP-8&quot;,&#xd;
+    &quot;quantity&quot;: 25,&#xd;
+    &quot;dateTime&quot;: &quot;2023-07-17 00:00:00.000&quot;,&#xd;
+    &quot;barCode&quot;: &quot;9164617963924317516&quot;,&#xd;
+    &quot;description&quot;: &quot;TELUS Boost Wi-Fi Expansion Pack&quot;,&#xd;
+    &quot;shippingAddress&quot;: {&#xd;
+        &quot;streetNr&quot;: &quot;85&quot;,&#xd;
+        &quot;streetName&quot;: &quot;JOHN ST&quot;,&#xd;
+        &quot;city&quot;: &quot;MERRITT&quot;,&#xd;
+        &quot;country&quot;: &quot;CAN&quot;,&#xd;
+        &quot;postcode&quot;: &quot;V0K2B0&quot;,&#xd;
+        &quot;stateOrProvince&quot;: &quot;BC&quot;&#xd;
+    },&#xd;
+    &quot;originatorId&quot;: &quot;123456&quot;,&#xd;
+    &quot;status&quot;: &quot;create&quot;,&#xd;
+    &quot;shippingContact&quot;: {&#xd;
+        &quot;phoneNumber&quot;: &quot;6047105322&quot;,&#xd;
+        &quot;email&quot;: &quot;sap@test.com&quot;&#xd;
+    }&#xd;
+}</queryString>
+    <java.net.URL>https://apigw-st.tsl.telus.com/rest/it04/customer/LoyaltyFulfillmentAPI_v1_0_RP/redemption/fulfill</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+<sample t="22165" it="2" lt="0" ct="0" ts="1690524411453" s="true" lb="WLN_T01_FIFA_GWP_SAP_ExpansionPack" rc="200" rm="Number of samples in transaction : 1, number of failing samples : 0" tn="LF_POST_WLN_Redemption_Kong 1-1" dt="" de="" by="525" sby="1169" sc="1" ec="0" ng="1" na="1" hn="BA-000453998">
+  <httpSample t="22165" it="0" lt="22165" ct="0" ts="1690524411455" s="true" lb="WLN_T01_FIFA_GWP_SAP_ExpansionPack" rc="200" rm="OK" tn="LF_POST_WLN_Redemption_Kong 1-1" dt="text" de="" by="525" sby="1169" sc="1" ec="0" ng="1" na="1" hn="BA-000453998">
+    <responseHeader class="java.lang.String">HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 6
+Connection: keep-alive
+traceresponse: 00-35f9bd6f27b2672be7b66f6ec1ec8016-c2586a302f8315e3-01
+x-dt-tracestate: b55664ae-77ca6b1c@dt
+cache-control: no-cache; no-store, must-revalidate, private
+pragma: no-cache
+expires: 0
+date: Fri, 28 Jul 2023 06:07:12 GMT
+kong-request-id: ac64a493-55ba-4deb-884b-6136c9c9f71e#1275679
+x-kong-upstream-latency: 21920
+x-kong-proxy-latency: 0
+via: kong/2.8.2.3-enterprise-edition
+vary: Origin
+vary: Origin
+</responseHeader>
+    <requestHeader class="java.lang.String">Connection: keep-alive
+Authorization: Basic Q0FNUE1HTVQ6c29hb3JnaWQ=
+Content-Type: application/json
+x-dynatrace-test: LSN=WLNLoyaltyAPI;TSN=WLN_T01_FIFA_GWP_SAP_ExpansionPack;SI=BZM;LTN=WLNLoyaltyAPI;VU=1;
+Content-Length: 767
+Host: apigw-st.tsl.telus.com
+User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_372)
+</requestHeader>
+    <responseData class="java.lang.String">340308</responseData>
+    <responseFile class="java.lang.String"></responseFile>
+    <cookies class="java.lang.String"></cookies>
+    <method class="java.lang.String">POST</method>
+    <queryString class="java.lang.String">{&#xd;
+    &quot;customerInfo&quot;: {&#xd;
+        &quot;customerId&quot;: 8,&#xd;
+        &quot;firstName&quot;: &quot;MARCO&quot;,&#xd;
+        &quot;lastName&quot;: &quot;ROBBINS-ZZ&quot;&#xd;
+    },&#xd;
+    &quot;billingAccountNumber&quot;: 200205256,&#xd;
+    &quot;providerTxnId&quot;: &quot;140021451&quot;,&#xd;
+    &quot;redemptionType&quot;: &quot;GWP-8&quot;,&#xd;
+    &quot;quantity&quot;: 25,&#xd;
+    &quot;dateTime&quot;: &quot;2023-07-19 00:00:00.000&quot;,&#xd;
+    &quot;barCode&quot;: &quot;9164617963924317516&quot;,&#xd;
+    &quot;description&quot;: &quot;TELUS Boost Wi-Fi Expansion Pack&quot;,&#xd;
+    &quot;shippingAddress&quot;: {&#xd;
+        &quot;streetNr&quot;: &quot;85&quot;,&#xd;
+        &quot;streetName&quot;: &quot;JOHN ST&quot;,&#xd;
+        &quot;city&quot;: &quot;MERRITT&quot;,&#xd;
+        &quot;country&quot;: &quot;CAN&quot;,&#xd;
+        &quot;postcode&quot;: &quot;V0K2B0&quot;,&#xd;
+        &quot;stateOrProvince&quot;: &quot;BC&quot;&#xd;
+    },&#xd;
+    &quot;originatorId&quot;: &quot;123456&quot;,&#xd;
+    &quot;status&quot;: &quot;create&quot;,&#xd;
+    &quot;shippingContact&quot;: {&#xd;
+        &quot;phoneNumber&quot;: &quot;6047105322&quot;,&#xd;
+        &quot;email&quot;: &quot;sap@test.com&quot;&#xd;
+    }&#xd;
+}</queryString>
+    <java.net.URL>https://apigw-st.tsl.telus.com/rest/it04/customer/LoyaltyFulfillmentAPI_v1_0_RP/redemption/fulfill</java.net.URL>
+  </httpSample>
+  <responseHeader class="java.lang.String"></responseHeader>
+  <requestHeader class="java.lang.String"></requestHeader>
+  <responseData class="java.lang.String">Non-TEXT response data, cannot record: ()</responseData>
+  <responseFile class="java.lang.String"></responseFile>
+</sample>
+
+</testResults>

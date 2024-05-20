@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection for RWRD" enabled="false">
+        <stringProp name="dataSource">Test</stringProp>
+        <stringProp name="poolMax">0</stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <boolProp name="preinit">false</boolProp>
+        <stringProp name="initQuery"></stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="checkQuery"></stringProp>
+        <stringProp name="dbUrl">jdbc:oracle:thin:@RWRDST-scan.corp.ads:41521/RWRDSTsv3.WORLD</stringProp>
+        <stringProp name="driver">oracle.jdbc.OracleDriver</stringProp>
+        <stringProp name="username">x248639</stringProp>
+        <stringProp name="password">T3lUs#15235!</stringProp>
+        <stringProp name="connectionProperties"></stringProp>
+        <stringProp name="TestPlan.comments">jdbc:oracle:thin:@hostname:porto:servicename</stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection for CODS" enabled="false">
+        <stringProp name="dataSource">Test</stringProp>
+        <stringProp name="poolMax">0</stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <boolProp name="preinit">false</boolProp>
+        <stringProp name="initQuery"></stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="checkQuery"></stringProp>
+        <stringProp name="dbUrl">jdbc:oracle:thin:@rac_an05086-scan:41521:ODSCM1STsva</stringProp>
+        <stringProp name="driver">oracle.jdbc.OracleDriver</stringProp>
+        <stringProp name="username">x264011</stringProp>
+        <stringProp name="password">1197@#t5ls1m</stringProp>
+        <stringProp name="connectionProperties"></stringProp>
+        <stringProp name="TestPlan.comments">jdbc:oracle:thin:@hostname:porto:servicename</stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request CODS" enabled="false">
+          <stringProp name="dataSource">Test</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT BA.BILLING_ACCOUNT_NUM FROM ODSCM.customer_individual cui, ODSCM.customer cust, ODSCM.billing_arrangement bir, 
+ODSCM.pay_channel pc,ODSCM.billing_account ba LEFT OUTER JOIN ODSCM.cust_contact_indvdl_asgnmt ccia ON BA.CUSTOMER_ID = ccia.CUSTOMER_ID AND 
+CCIA.CONTACT_ROLE_TYPE_CD = &apos;N&apos; AND ccia.EFF_END_DT IS NULL LEFT OUTER JOIN ODSCM.contact_individual ci ON 
+ccia.CONTACT_INDVDL_ID = ci.CONTACT_INDVDL_ID LEFT OUTER JOIN ODSCM.contact_indvdl_elec_cntct ciec ON 
+ccia.CONTACT_INDVDL_ID = ciec.CONTACT_INDVDL_ID 
+AND ciec.EFF_END_DT IS NULL and ciec.ELEC_ADDR_SUBTYPE_CD =&apos;EPR&apos; WHERE BA.CUSTOMER_ID = cui.CUSTOMER_ID AND cui.EFF_END_DT is null and 
+BA.CUSTOMER_ID = cust.CUSTOMER_ID and BA.BILLING_ACCOUNT_ID = bir.BILLING_ACCOUNT_ID and 
+BIR.BILLING_ARRANGEMENT_ID = pc.BILLING_ARRANGEMENT_ID AND ba.coll_start_dt IS NULL and ba.BACCT_STATUS_CD =&apos;O&apos; and 
+cust.CUST_TYPE_CD = &apos;R&apos; and rownum &lt; 500000</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable">db1</stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="false">
+          <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">String Filenamedynamic =&quot;FFH_VAN.txt&quot;;
+File file = new File(Filenamedynamic);
+FileWriter fstream = new FileWriter(file, true);
+BufferedWriter out = new BufferedWriter(fstream);
+BAN=vars.get(&quot;ban&quot;);
+out.write(BAN+&quot;\n&quot;);
+out.close();
+fstream.close();</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="JDBC Request RWRD" enabled="false">
+          <stringProp name="dataSource">Test</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">select billing_account_num from loyalty_pgm_enrol where rownum &lt; 500</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames"></stringProp>
+          <stringProp name="resultVariable">db2</stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="false">
+          <stringProp name="IfController.condition">${JMeterThread.last_sample_ok}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="BeanShell Sampler" enabled="true">
+            <stringProp name="BeanShellSampler.query">String Filenamedynamic =&quot;RWRD_BAN.txt&quot;;
+File file = new File(Filenamedynamic);
+FileWriter fstream = new FileWriter(file, true);
+BufferedWriter out = new BufferedWriter(fstream);
+BAN=vars.get(&quot;ban&quot;);
+out.write(BAN+&quot;\n&quot;);
+out.close();
+fstream.close();</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <org.apache.jmeter.protocol.ssh.sampler.SSHSFTPSampler guiclass="TestBeanGUI" testclass="org.apache.jmeter.protocol.ssh.sampler.SSHSFTPSampler" testname="SSH SFTP_Put Command in Script.sh file_RWRD" enabled="false">
+          <stringProp name="TestPlan.comments">Change the source file according to project </stringProp>
+          <stringProp name="action">put</stringProp>
+          <intProp name="connectionTimeout">5000</intProp>
+          <stringProp name="destination">/work/data/engineering/Perf_test</stringProp>
+          <stringProp name="hostname">btln001852</stringProp>
+          <stringProp name="passphrase"></stringProp>
+          <stringProp name="password">telus2015</stringProp>
+          <intProp name="port">22</intProp>
+          <boolProp name="printFile">true</boolProp>
+          <stringProp name="source">C:\Users\sumit.kumar10\Documents\apache-jmeter-5.5\apache-jmeter-5.5\bin\RWRD_BAN.txt</stringProp>
+          <stringProp name="sshkeyfile"></stringProp>
+          <stringProp name="username">mzwrk1</stringProp>
+        </org.apache.jmeter.protocol.ssh.sampler.SSHSFTPSampler>
+        <hashTree/>
+        <org.apache.jmeter.protocol.ssh.sampler.SSHSFTPSampler guiclass="TestBeanGUI" testclass="org.apache.jmeter.protocol.ssh.sampler.SSHSFTPSampler" testname="SSH SFTP_Put Command in Script.sh file_CODS" enabled="false">
+          <stringProp name="TestPlan.comments">Change the source file according to project </stringProp>
+          <stringProp name="action">put</stringProp>
+          <intProp name="connectionTimeout">5000</intProp>
+          <stringProp name="destination">/work/data/engineering/Perf_test</stringProp>
+          <stringProp name="hostname">btln001852</stringProp>
+          <stringProp name="passphrase"></stringProp>
+          <stringProp name="password">telus2015</stringProp>
+          <intProp name="port">22</intProp>
+          <boolProp name="printFile">true</boolProp>
+          <stringProp name="source">C:\Users\sumit.kumar10\Desktop/COD_BAN.txt</stringProp>
+          <stringProp name="sshkeyfile"></stringProp>
+          <stringProp name="username">mzwrk1</stringProp>
+        </org.apache.jmeter.protocol.ssh.sampler.SSHSFTPSampler>
+        <hashTree/>
+        <org.apache.jmeter.protocol.ssh.sampler.SSHCommandSampler guiclass="TestBeanGUI" testclass="org.apache.jmeter.protocol.ssh.sampler.SSHCommandSampler" testname="SSH Command for Distinct data" enabled="true">
+          <stringProp name="TestPlan.comments">using &amp;&amp; sapration, can execute Timing on multiple directory</stringProp>
+          <stringProp name="hostname">btln001852</stringProp>
+          <intProp name="port">22</intProp>
+          <intProp name="connectionTimeout">5000</intProp>
+          <stringProp name="username">mzwrk1</stringProp>
+          <stringProp name="password">telus2015</stringProp>
+          <stringProp name="sshkeyfile"></stringProp>
+          <stringProp name="passphrase"></stringProp>
+          <stringProp name="command">cd /work/data/engineering/Perf_test &amp;&amp; comm -1 -3 &lt;(sort RWRD_BAN.txt) &lt;(sort CODS_BAN.txt) &gt; output.txt</stringProp>
+          <boolProp name="useReturnCode">true</boolProp>
+          <boolProp name="useTty">false</boolProp>
+          <boolProp name="printStdErr">true</boolProp>
+        </org.apache.jmeter.protocol.ssh.sampler.SSHCommandSampler>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">Time</stringProp>
+            <stringProp name="RegexExtractor.regex">Apr(.*?)\n</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">novalue</stringProp>
+            <stringProp name="RegexExtractor.match_number">-1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <org.apache.jmeter.protocol.ssh.sampler.SSHSFTPSampler guiclass="TestBeanGUI" testclass="org.apache.jmeter.protocol.ssh.sampler.SSHSFTPSampler" testname="SSH SFTP_GET_Distinct DATA(Output.txt)" enabled="false">
+          <stringProp name="action">get</stringProp>
+          <intProp name="connectionTimeout">5000</intProp>
+          <stringProp name="destination"></stringProp>
+          <stringProp name="hostname">btln001852</stringProp>
+          <stringProp name="passphrase"></stringProp>
+          <stringProp name="password">telus2015</stringProp>
+          <intProp name="port">22</intProp>
+          <boolProp name="printFile">true</boolProp>
+          <stringProp name="source">/work/data/engineering/Perf_test/output.txt</stringProp>
+          <stringProp name="sshkeyfile"></stringProp>
+          <stringProp name="username">mzwrk1</stringProp>
+        </org.apache.jmeter.protocol.ssh.sampler.SSHSFTPSampler>
+        <hashTree/>
+        <org.apache.jmeter.protocol.ssh.sampler.SSHCommandSampler guiclass="TestBeanGUI" testclass="org.apache.jmeter.protocol.ssh.sampler.SSHCommandSampler" testname="SSH SFTP_DELETE_Distinct DATA(Output.txt)" enabled="true">
+          <stringProp name="TestPlan.comments">using &amp;&amp; sapration, can execute Timing on multiple directory</stringProp>
+          <stringProp name="hostname">btln001852</stringProp>
+          <intProp name="port">22</intProp>
+          <intProp name="connectionTimeout">5000</intProp>
+          <stringProp name="username">mzwrk1</stringProp>
+          <stringProp name="password">telus2015</stringProp>
+          <stringProp name="sshkeyfile"></stringProp>
+          <stringProp name="passphrase"></stringProp>
+          <stringProp name="command">rm /work/data/engineering/Perf_test/output.txt &amp;&amp; rm /work/data/engineering/Perf_test/RWRD_BAN.txt &amp;&amp; rm /work/data/engineering/Perf_test/CODS_BAN.txt</stringProp>
+          <boolProp name="useReturnCode">true</boolProp>
+          <boolProp name="useTty">false</boolProp>
+          <boolProp name="printStdErr">true</boolProp>
+        </org.apache.jmeter.protocol.ssh.sampler.SSHCommandSampler>
+        <hashTree>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">Time</stringProp>
+            <stringProp name="RegexExtractor.regex">Apr(.*?)\n</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">novalue</stringProp>
+            <stringProp name="RegexExtractor.match_number">-1</stringProp>
+            <stringProp name="Sample.scope">all</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>true</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">RWRD_BAN.txt</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,4 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1697110708597,11317,JDBC Request RWRD,200,OK,Thread Group 1-1,text,true,,4061,0,1,1,null,7060,0,6731
+1697110805719,8346,JDBC Request RWRD,200,OK,Thread Group 1-1,text,true,,4061,0,1,1,null,7034,0,6706
+1697110823284,8358,JDBC Request RWRD,200,OK,Thread Group 1-1,text,true,,4061,0,1,1,null,7045,0,6714
